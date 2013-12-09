@@ -15,6 +15,10 @@ body {
 	  background-color: #fff;
 }
 
+img {
+	border: 0px;
+}
+
 /* H1 headers*/
 
 h1 {
@@ -28,6 +32,15 @@ h1 {
 }
 
 @media (min-width: 700px) {
+	h1 {
+		font-size: 28px;
+		position: relative;
+		text-align: left;
+		margin-top: 0px;
+	}
+}
+
+@media (min-width: 755px) {
 	h1 {
 		font-size: 34px;
 		position: relative;
@@ -110,6 +123,14 @@ h4 {
 
 @media (min-width: 700px) {
 	h4 {
+		font-size: 16px;
+		text-align: left;
+		margin-bottom: 20px;
+	}
+}
+
+@media (min-width: 755px) {
+	h4 {
 		font-size: 18px;
 		text-align: left;
 		margin-bottom: 20px;
@@ -142,7 +163,7 @@ a {
 /* Header background */
 
 header {
-	height: 80px;
+	height: 50px;
 	padding-top: 10px;
 	background-color: #ffca00;
 }
@@ -226,9 +247,27 @@ ul {
 /* Introduction */
 
 .intro {
-	background-color: #bec5ca;
+	background-image: url(img/shape-pattern3.png);
+	text-align: center;
 	margin-bottom: 0px;
-	padding: 80px 0;
+	padding: 80px 20px;
+}
+
+
+.intro-text {
+	color: black;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding: 5px;
+	font-weight: 600;
+	max-width: 80%;
+}
+
+@media (min-width: 940px) {
+	.intro-text {
+		padding: 10px;
+	}
 }
 
 .arrow-down {
@@ -236,7 +275,7 @@ ul {
 	height: 0; 
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
-	border-top: 10px solid #565656;
+	border-top: 10px solid #000;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -248,8 +287,6 @@ ul {
 /* Projects */
 
 .project {
-
-	min-height: 290px;
 	max-height: 600px;
 	max-width: 1120px;
 	padding: 5px 0px 0px 0px;
@@ -271,9 +308,10 @@ ul {
 
 @media (min-width: 700px) {
 	.description {
-		width: 50%;
-		min-width: 300px;
-		float: left;
+		width: 49%;
+		display: inline-block;
+		vertical-align: top; 
+		text-align:left; 
 	}
 }
 
@@ -301,6 +339,11 @@ ul {
 	margin-right: auto;
 }
 
+@media (max-width: 700px) {
+	.tag-container {
+		margin-bottom: 40px
+	}
+}
 
 .tag {
 	margin: 20px 0px 10px 0px;
@@ -386,54 +429,35 @@ ul {
 	}
 }
 
+/* Images */
 
-/* Turkcell */
-
-.turkcell-img {
-	height: 290px;
-	width: 290px;
-	background-image: url(img/turkcell/Turkcell-data-package.png);
+.image-width {
 	margin-left: auto;
 	margin-right: auto;
 }
 
 @media (min-width: 700px) {
-	.turkcell-img {
-		float: right;
-		margin-left: 20px;
-	}
-}
-
-@media (min-width: 870px) {
-	.turkcell-img {
-		width: 46%;
-		background-repeat: no-repeat;
-	}
+	.image-width {
+		display: inline-block;
+		width: 49%;
 }
 
 
-/* Henieken */
+}
 
-.heineken-img {
-	height: 290px;
-	width: 290px;
-	background-image: url(img/heineken/tablet-mobile-290-500.png);
-	overflow: hidden;
+.image-thumbnail {
+	display: block;
+	height: auto;
+	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+	background-repeat: no-repeat;
 }
 
 @media (min-width: 700px) {
-	.heineken-img {
-		float: right;
-		margin-left: 20px;
-	}
-}
-
-@media (min-width: 870px) {
-	.heineken-img {
-		width: 46%;
-		background-repeat: no-repeat;
+	.image-thumbnail {
+		display: inline-block;
+		
 	}
 }
 
@@ -509,9 +533,10 @@ ul {
 /* Foooter */
 
 footer {
-	height: 200px;
+	min-height: 200px;
+	max-height: 250px;
 	background-color: #4c4c4c;
-	padding: 40px 0 0 0;
+	padding: 40px 0 10px 0;
 	margin-top: -20px;
 }
 
@@ -559,8 +584,42 @@ footer {
 }
 
 
+/* Copyright */
+
+.copyright {
+	font-size: 12px;
+	color: #232323;
+	margin: 20px auto 20px auto;
+	text-align: center;
+	padding: 0 20px 0 20px;
+}
+
+
 /* Misc */
 
 .red {
 	color: #ea103a;
+}
+
+/* About me */
+
+.timeline {
+	min-height: 20px;
+	max-height: 200px;§
+	width: 80%;
+	margin-right: 20%;
+	margin-left: 20%;
+
+}
+
+.year {
+	display: inline-block;	
+	max-width: 20%;
+	margin: 40px;
+}
+
+.milestone {
+	display: inline-block;
+	text-align: left;
+	max-width: 70%;
 }
